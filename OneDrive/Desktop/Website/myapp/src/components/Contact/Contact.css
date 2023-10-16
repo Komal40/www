@@ -1,0 +1,19 @@
+body{
+
+
+-webkit-text-size-adjust: 100%;
+-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+font-size: 14px;
+line-height: 1.42857143;
+font-family: 'Open Sans', sans-serif;
+text-rendering: optimizeLegibility !important;
+-webkit-font-smoothing: antialiased !important;
+color: #636b72;
+box-sizing: border-box;
+}
+
+@media screen and (max-width:796px) {
+    iframe{
+        margin: 0;
+    }
+}

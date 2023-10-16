@@ -1,0 +1,34 @@
+.Team_parent{
+    height: 20rem;
+    display: flex;
+    margin:auto;
+    width:85vw; 
+    padding:2rem;
+    /* margin-top:4rem; */
+    overflow: scroll;
+    margin-top: -0.5rem ;
+    margin-bottom: 3rem;
+}
+
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+.Team_card{
+    background-color: whitesmoke;
+    min-width:15rem;
+    min-height:12rem;
+    padding:1rem;
+    margin-right:2rem;
+    border-radius:10px;
+    text-align: center;
+ 
+}
+
+.Team_card img{
+    height:90px;
+    width:90px;
+    border-radius: 50%; 
+}

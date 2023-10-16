@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <!-- Bootstrap CSS link -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.2/css/bootstrap.min.css" rel="stylesheet">
+<!-- <ink href=""></ink> -->
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+   
+    <title>Cellus Tech</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+     
+<!-- Bootstrap JavaScript and dependencies -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.2/js/bootstrap.min.js"></script>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+
+  if (window.innerWidth < 992) {
+  
+
+    document.querySelectorAll('.navbar .dropdown').forEach(function(everydropdown){
+      everydropdown.addEventListener('hidden.bs.dropdown', function () {
+        // after dropdown is hidden, then find all submenus
+          this.querySelectorAll('.submenu').forEach(function(everysubmenu){
+            // hide every submenu as well
+            everysubmenu.style.display = 'none';
+          });
+      })
+    });
+  
+    document.querySelectorAll('.dropdown-menu a').forEach(function(element){
+      element.addEventListener('click', function (e) {
+          let nextEl = this.nextElementSibling;
+          if(nextEl && nextEl.classList.contains('submenu')) {	
+            // prevent opening link if link needs to open dropdown
+            e.preventDefault();
+            if(nextEl.style.display == 'block'){
+              nextEl.style.display = 'none';
+            } else {
+              nextEl.style.display = 'block';
+            }
+  
+          }
+      });
+    })
+  }
+
+  }); 
+
+
+</script>
+  </body>
+</html>
+
+
+
