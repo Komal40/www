@@ -1,0 +1,12 @@
+.newproduct__main{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width:768px) {
+    .heading_products{
+        margin-top: 2em;
+    }
+}

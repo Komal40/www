@@ -1,0 +1,40 @@
+/* .container{
+    margin:1rem;
+  
+    padding-left: 2px;
+    padding-right: 8px; 
+    width: 100%;
+} */
+
+#social-section {
+    padding: 20px 0;
+  
+    /* background-color: #c9cbce; */
+    background-color: var(--color-blue);
+    text-align: center;
+}
+
+
+.container img{
+    height: 75px;
+
+}
+
+.container
+.row
+strong, h2{
+    color:white;
+}
+
+.container h2{
+    margin:2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+

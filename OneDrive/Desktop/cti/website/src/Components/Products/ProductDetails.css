@@ -1,0 +1,22 @@
+.details__parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+}
+
+.details__main {
+    text-align: center;
+}
+
+.details__parent img{
+    height: 50vh;
+    width: 50vw;
+}
+
+.details__heading,
+.details__para{
+    color:black;
+    margin:3rem 0;
+}
+

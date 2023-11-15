@@ -1,0 +1,216 @@
+nav{
+    height: auto;
+    position: fixed;
+    left:0;
+    top:0;
+    z-index: 10;
+    width: 100%;
+    background: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.nav__logo img{
+   height: 4.5rem;
+    width: auto;
+}
+nav ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    align-items: center;
+    /* margin-left: 4rem;*/
+    /* margin-top: 1.4rem; */
+}
+
+
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    /* margin: 0 0.2rem; */
+    justify-content: center;
+    font-weight: 2rem;
+    padding: 0.5vw;
+    font-weight: 600;
+    /* height: 30rem; */
+    transition: height 0.3s;
+}
+
+.loginbtn
+button{
+    border-radius: 5px;
+    width: 6rem;
+    font-weight: 600;
+    height: 2.4rem;
+  background-color: var(--color-blue);
+  color: white;
+}
+
+
+/* .nav__ul{
+    margin-left: 15rem;
+} */
+
+nav ul li a:hover{
+background: white;
+ margin-top: 2rem;
+   text-decoration: none;
+   border-radius: 6px;
+   margin-bottom: 2rem;
+}
+
+
+.burger-menu {
+  display: none; /* Initially hide the burger menu on larger screens */
+  cursor: pointer;
+}
+
+.burger-menu .bar {
+  height: 3px;
+  width: 25px;
+  background-color: white;
+  margin: 5px auto;
+  transition: 0.4s;
+}
+
+.active .burger-menu .bar:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.active .burger-menu .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.active .burger-menu .bar:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+
+
+@media screen and (max-width:990px) {
+  .burger-menu {
+    margin-right: 1.2rem;
+    display: block; /* Show the burger menu on smaller screens */
+  }
+
+  .nav__container .active {
+    display: flex; /* Show menu items when active class is added */
+  }
+  
+}
+
+@media (max-width: 768px) {
+    .nav__container {
+      display: none; /* Hide the menu items by default on small screens */
+      flex-direction: column; /* Stack menu items vertically */
+      position: absolute;
+      top: 100%; /* Position dropdown menu below the nav bar */
+      left: 0;
+      width: 100%;
+      background: var(--color-primary);
+    }
+  
+    .nav__container.active {
+      display: flex; /* Show menu items when active class is added */
+    }
+  
+    .nav__container ul {
+      width: 100%;
+      padding: 1rem;
+      flex-direction: column;
+    }
+  
+    .nav__container ul li {
+      margin: 0.5rem 0;
+    }
+/*   
+    .nav__container ul li a {
+      color: white;
+      font-size: 1.2rem;
+    } */
+  
+    .nav__container ul li a:hover {
+      background: transparent;
+    }
+    .burger-menu {
+      margin-right: 1.2rem;
+      display: block; /* Show the burger menu on smaller screens */
+    }
+  
+    .nav__container .active {
+      display: flex; /* Show menu items when active class is added */
+    }
+
+    nav ul li a{
+      color: white;
+      text-decoration: none;
+      /* margin: 0 0.2rem; */
+      justify-content: center;
+      /* font-weight: 1rem; */
+      /* padding: 0; */
+      font-weight: 600;
+      /* height: 30rem; */
+      transition: height 0.3s;
+  }
+  }
+
+
+  @media (max-width: 1197px) {
+    .nav__container {
+      display: none; /* Hide the menu items by default on small screens */
+      flex-direction: column; /* Stack menu items vertically */
+      position: absolute;
+      top: 100%; /* Position dropdown menu below the nav bar */
+      left: 0;
+      width: 100%;
+      background: var(--color-primary);
+    }
+  
+    .nav__container.active {
+      display: flex; /* Show menu items when active class is added */
+    }
+  
+    .nav__container ul {
+      width: 100%;
+      padding: 1rem;
+      flex-direction: column;
+    }
+  
+    .nav__container ul li {
+      margin: 0.5rem 0;
+    }
+/*   
+    .nav__container ul li a {
+      color: white;
+      font-size: 1.2rem;
+    } */
+  
+    .nav__container ul li a:hover {
+      background: transparent;
+    }
+    .burger-menu {
+      margin-right: 1.2rem;
+      display: block; /* Show the burger menu on smaller screens */
+    }
+  
+    .nav__container .active {
+      display: flex; /* Show menu items when active class is added */
+    }
+
+    nav ul li a{
+      color: white;
+      text-decoration: none;
+      /* margin: 0 0.2rem; */
+      justify-content: center;
+      /* font-weight: 1rem; */
+      /* padding: 0; */
+      font-weight: 600;
+      /* height: 30rem; */
+      transition: height 0.3s;
+  }
+  }
+
+  
