@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "../Images/logo.png";
 import tag from "../Images/tag.png";
-import grp from "../Images/grp.png";
+import grp from "../Images/home2__grp.png";
 import "./Home2.css";
 
 

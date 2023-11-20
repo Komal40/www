@@ -1,12 +1,12 @@
 .page-id-8074 .side-banner {
-    height: 700px !important;
+    height: 800px !important;
 }
 
 .side-banner {
     height: 600px !important;
 }
 .with-background-image {
-    margin-top: 4% !important;
+    margin-top: 1% !important;
 }
 
 [class*="bg-"], [class*="bg-"] .wrap {
@@ -23,6 +23,7 @@
 
 .side-banner .header-content h1 {
     font-family: Arial !important;
+    margin-top: 8rem;
 }
 .header-content p {
     margin-top: 0;
@@ -69,6 +70,18 @@
         width: 100vw;
         height: 200px;
     }
+    .auto__heading{
+        width: 100%;
+        text-align: left;
+    }
+    
+.auto__heading img{
+    width: 40rem;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
     .s-i-left {
         position: absolute;
         display: flex;

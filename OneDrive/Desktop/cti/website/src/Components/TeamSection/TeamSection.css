@@ -6,8 +6,8 @@
 .teams__{
     height: 1rem;
     background-color: var(--color-primary);
-
 }
+
 .Team_parent{
     height: 20rem;
     display: flex;

@@ -175,8 +175,8 @@
     .organise-item{
         display: flex;
         flex-direction: column-reverse;
-        padding-left: 6vw;
-        padding-right: 6vw;
+        padding-left: 2vw;
+        padding-right: 2vw;
         padding-top: 5vh;
         padding-bottom: 5vh;
         /* margin-top: 124px; */
@@ -185,8 +185,8 @@
     .organise-item-rev{
         display: flex;
         flex-direction: column;
-        padding-left: 6vw;
-        padding-right: 6vw;
+        padding-left: 0.5vw;
+        padding-right: 0.3vw;
         padding-top: 5vh;
         padding-bottom: 5vh;
     }
@@ -309,10 +309,5 @@
 
 }
 
-@media screen and (max-width:650px) {
-    .o-i-right-smaller .reveal-top{
-        
-    }
-}
 
 

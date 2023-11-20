@@ -1,6 +1,6 @@
 nav{
     height: auto;
-    position: fixed;
+    position: relative;
     left:0;
     top:0;
     z-index: 10;
@@ -8,13 +8,33 @@ nav{
     background: var(--color-primary);
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    margin: 0;
+}
+
+
+
+.nav-container{
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 12;
+
+}
+
+
+nav.scrolled {
+  margin-top: 0;
+  /* Add any additional styling you need for the scrolled state */
 }
 
 
 .nav__logo img{
-   height: 4.5rem;
-    width: auto;
+   /* height: 5rem;
+    width: auto; */
+    display: none;
 }
 nav ul{
     display: flex;
@@ -25,10 +45,12 @@ nav ul{
     /* margin-top: 1.4rem; */
 }
 
-
+#google_ele{
+  margin-left: 20vw;
+}
 
 nav ul li a{
-    color: white;
+    color: black;
     text-decoration: none;
     /* margin: 0 0.2rem; */
     justify-content: center;
@@ -54,13 +76,24 @@ button{
     margin-left: 15rem;
 } */
 
+
 nav ul li a:hover{
 background: white;
- margin-top: 2rem;
+ /* margin-top: 2rem; */
    text-decoration: none;
    border-radius: 6px;
-   margin-bottom: 2rem;
+   /* margin-bottom: 2rem; */
 }
+/* Add this style to hide the logo when scrolled down */
+.hide-logo .navlogo {
+  /* display: none; */
+  opacity: 0;
+  margin-top: -80px;
+  padding:8px;
+  transition: 0.4s ease;
+}
+
+/* Additional styles for your components... */
 
 
 .burger-menu {
@@ -87,20 +120,58 @@ background: white;
 .active .burger-menu .bar:nth-child(3) {
   transform: rotate(45deg) translate(-5px, -6px);
 }
+/* 
+@media screen and (max-width:1400px) {
+  nav{
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+  }
+  .nav__logo img{
+    height: 4.5rem;
+     width: auto;
+     display: block;
+     
+ }
 
+
+ #google_ele{
+  margin-left: 0;
+}
+} */
 
 
 @media screen and (max-width:990px) {
+
   .burger-menu {
-    margin-right: 1.2rem;
+    margin-right: 1.3rem;
+    float: right;
     display: block; /* Show the burger menu on smaller screens */
   }
 
   .nav__container .active {
     display: flex; /* Show menu items when active class is added */
   }
+
+  nav{
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+  }
+  
+  .nav__logo img{
+    height: 4.5rem;
+     width: auto;
+     display: block;
+     
+ }
+ #google_ele{
+  margin-left: 0;
+}
   
 }
+
+
 
 @media (max-width: 768px) {
     .nav__container {
@@ -145,7 +216,6 @@ background: white;
     }
 
     nav ul li a{
-      color: white;
       text-decoration: none;
       /* margin: 0 0.2rem; */
       justify-content: center;
@@ -157,8 +227,22 @@ background: white;
   }
   }
 
+  @media (max-width: 1500px) {
+    nav ul li a{
+      padding: 0;
+      margin: 5px;
+  }
+  nav{
+    margin-top: 0;
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+  }
+  
+  }
 
-  @media (max-width: 1197px) {
+
+  @media (max-width: 1040px) {
     .nav__container {
       display: none; /* Hide the menu items by default on small screens */
       flex-direction: column; /* Stack menu items vertically */
@@ -168,7 +252,12 @@ background: white;
       width: 100%;
       background: var(--color-primary);
     }
-  
+    .nav__logo img{
+      height: 4.5rem;
+       width: auto;
+       display: block;
+       
+   }
     .nav__container.active {
       display: flex; /* Show menu items when active class is added */
     }
@@ -182,18 +271,18 @@ background: white;
     .nav__container ul li {
       margin: 0.5rem 0;
     }
-/*   
-    .nav__container ul li a {
-      color: white;
-      font-size: 1.2rem;
-    } */
-  
+
     .nav__container ul li a:hover {
       background: transparent;
     }
     .burger-menu {
       margin-right: 1.2rem;
+      float:right;
       display: block; /* Show the burger menu on smaller screens */
+    }
+
+    #google_ele{
+      margin-left: 0;
     }
   
     .nav__container .active {
@@ -201,14 +290,11 @@ background: white;
     }
 
     nav ul li a{
-      color: white;
+
       text-decoration: none;
-      /* margin: 0 0.2rem; */
       justify-content: center;
-      /* font-weight: 1rem; */
-      /* padding: 0; */
+      padding: 0;
       font-weight: 600;
-      /* height: 30rem; */
       transition: height 0.3s;
   }
   }

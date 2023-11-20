@@ -21,7 +21,7 @@ export const content = [
   {
     id: 7,
     heading: "AUTOSAR MIGRATION AND INTEGRATION",
-    para: "CellusTech India hold expertise in AUTOSAR Migration and Integration services. CellusTech India follows some steps and activities in both AUTOSAR Migration & Integration services.",
+    para: "CellusTech India hold expertise in AUTOSAR Migration and Integration services. ",
     bulb: car,
   },
   {

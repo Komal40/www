@@ -30,9 +30,9 @@ export default function Services() {
        <h2>AUTOSAR</h2>
        <div class="pic" style={{backgroundColor:' var(--white)', border:' 3px solid #00C2C1'}}><img src={autosar} style={{backgroundColor:' var(--white)'}}/></div>
  
-       <div class="desc">Classic as Standardized, real-time, safety-focused, scalable automotive software architecture.
+       <div class="desc">Classic as Standardized, scalable automotive software architecture.
 
-Adaptive as Dynamic, high-performance, networking, cloud-integration, future-ready vehicle software architecture.</div>
+Adaptive as Dynamic, networking, cloud-integration, future-ready vehicle software architecture.</div>
  
      </article>
      {/* <!-- <div class="actions">

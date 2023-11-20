@@ -26,7 +26,8 @@ export default function Home() {
                 color: "var(--color-primary)",
                 fontSize: "4rem",
                 marginTop: "-1rem",
-                fontWeight:'520'
+                fontWeight:'520',
+                
               }}
             >
               CELLUS TECH INDIA

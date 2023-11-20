@@ -7,7 +7,7 @@ export default function Home() {
     <div id="main" >
       {/* <img src={logo} style={{float:"right",marginTop:"7rem",height:"30rem",width:"30rem"}}/> */}
       <div className="name">
-        <h1>WELCOME TO SS TEXTILE INDIA</h1>
+        <h1>WELCOME TO CELLUS TECH INDIA</h1>
         <div>
         <p className="details">A SYMBOL OF TECHNICAL EXCELLENCE</p>
        

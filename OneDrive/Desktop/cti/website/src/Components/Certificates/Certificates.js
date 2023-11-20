@@ -21,14 +21,21 @@ export default function Certificates() {
           </div>
         </div>
 </div>
+<div className="iotSol__text">
+          <p style={{marginTop:'3%'}}>
+          At Cellus Tech India, we prioritize quality and compliance. Our products meet the highest industry benchmarks, validated by CE, ISO, and RoHS certifications. We uphold these standards to ensure the utmost reliability, safety, and environmental responsibility in all our offerings.
+          </p>
+        </div>
 
 
 <div className='text_img'>
 
 <div className='certificate__data'>
 <div className='certificate__text'>
-  <p style={{color:'black', fontFamily:'Poppins', fontWeight:'600'}}>At Cellus Tech India, we prioritize quality and compliance. Our products meet the highest industry benchmarks, validated by CE, ISO, and RoHS certifications. We uphold these standards to ensure the utmost reliability, safety, and environmental responsibility in all our offerings.</p>
+  {/* <p style={{color:'black', fontFamily:'Poppins', fontWeight:'600'}}>At Cellus Tech India, we prioritize quality and compliance. Our products meet the highest industry benchmarks, validated by CE, ISO, and RoHS certifications. We uphold these standards to ensure the utmost reliability, safety, and environmental responsibility in all our offerings.</p> */}
 </div>
+
+
 
 <div className='certificate__img'> 
     <div className='certificate__left'>

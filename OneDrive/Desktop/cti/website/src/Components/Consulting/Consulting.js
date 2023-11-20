@@ -11,7 +11,7 @@ export default function Consulting() {
       <div className="iotSol__head">
         <div className="iotSol__headImg1">
           {/* <img src={iotSol} style={{marginLeft:'5rem'}} /> */}
-          <h1 style={{ marginLeft: "2rem" }}>
+          <h1 >
             {" "}
             <span style={{ color: "var(--color-primary)" }}>
               Consulting Services

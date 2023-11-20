@@ -1,0 +1,19 @@
+.present{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 2% 35%;
+    text-decoration: none;
+}
+
+
+@media screen and (max-width:1024px) {
+    .present{
+        display: flex;
+        flex-direction: column;
+    }
+    .present button{
+        margin-bottom: 20px;
+        width: max-content;
+    }
+}

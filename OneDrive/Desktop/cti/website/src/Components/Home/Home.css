@@ -11,14 +11,16 @@
 #home{
     color: white;
     text-align: left;
-    top:30%;
+    top:40%;
     left:5%;
     position:absolute;
     font-weight: 500;
     gap:1rem;
 }
 
-
+.home__heading{
+    text-align: left;
+}
 .home__heading p{
     font-style: italic;
     font-size: 25px;
@@ -130,12 +132,12 @@
 
 
 @media (min-width:636px) and (max-width:1000px){
-
     .home__iot img{
         display:none;
         
     }
 }
+
 @media screen and (max-width:650px) {
     #container{
         height: 100vh;
@@ -144,23 +146,56 @@
         display: flex;
         flex-direction: column;
         background-color: transparent;
-        width: 80vw;
+        /* width: 80vw; */
         height: 0;
         z-index: 1;
         align-items: center;  
         justify-content: center;         
     }
+    .home__heading {
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
     
+    .home__products button{
+        margin-top:1rem;
+        margin-bottom: 1rem;
+        margin-left: 0;
+    }
+#home{
+    top:15%;
+    text-align: center;
+    left: 0%;
+    padding: 8px;
+}
+.home__products .mleft .img__wrapper{
+    margin-left: 0;
+}
+    .img__wrapper{
+        margin:1rem 0;
+    }
+    .home__products p{
+        margin-left: 0;
+    }
+
 .home__products .mleft{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 50%;
+}
+
+.home__products{
+
 }
 
 .mleft p
 {
 color: white;
+text-align: center;
+font-size: 1.25rem;
 margin-bottom: -1px;
 }
 
@@ -170,11 +205,12 @@ margin-bottom: -1px;
     align-items: center;
     justify-content: center;
     margin-bottom: 10px;
+    margin-left: 0;
 }
 .home__products button{
-    height: 2rem;
+    height: 3rem;
     border-radius: 3rem;
-    width: 8rem;
+    width: 9rem;
     font-weight: 600;
     /* margin-top: 3rem;     */
 }
@@ -188,14 +224,10 @@ margin-bottom: -1px;
     
 }
 .home__products img{
-    height: 2rem;
-    width: 2rem;  
+    height: 2.5rem;
+    width: 2.5rem;  
 }
 
 }
-
-
-
-
 
 

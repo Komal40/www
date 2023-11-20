@@ -161,7 +161,7 @@ export default function Contact() {
           <p style={{ color: "black" }}>
             {/* <i class="fa fa-phone fa-fw pull-left fa-2x"></i> */}
             <BsTelephoneFill style={{ marginRight: "1em" }} />
-            +91 1493-294877
+            +91 1493-452877
             <br />
           </p>
           <p style={{ color: "black" }}>

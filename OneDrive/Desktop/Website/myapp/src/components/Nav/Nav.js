@@ -9,10 +9,10 @@ export default function Nav() {
    
     <nav class="navbar navbar-expand-lg navbar-dark bg-info nav">
     <div class="container-fluid">
-    <img className='img1' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhXiiBx-DojbOKCEHDBhf8l6gztcUJOzAuOiUdDdJJrA&s' alt='logo' style={{height:'3rem'}}/>
-    {/* <img className='img1' src='https://cellustechindia.com/img/cti_new_logo2.png' alt='logo'/> */}
+    {/* <img className='img1' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhXiiBx-DojbOKCEHDBhf8l6gztcUJOzAuOiUdDdJJrA&s' alt='logo' style={{height:'3rem'}}/> */}
+    <img className='img1' src='https://cellustechindia.com/img/cti_new_logo2.png' alt='logo'/>
     <a class="navbar-brand" href="#">
-      {/* <img className='img' src='https://cellustechindia.com/img/skaio_logo.png' alt='logo'/> */}
+      <img className='img' src='https://cellustechindia.com/img/skaio_logo.png' alt='logo'/>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav"  aria-controls="main_nav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>

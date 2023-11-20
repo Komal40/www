@@ -1,9 +1,9 @@
 import React from 'react'
 import './Testimonials.css'
 import img1 from '../images/peoples/p1.jpg'
-import img2 from '../images/peoples/p2.jpg'
-import img3 from '../images/peoples/p3.jpg'
-import img4 from '../images/peoples/p4.jpg'
+// import img2 from '../images/peoples/p2.jpg'
+// import img3 from '../images/peoples/p3.jpg'
+// import img4 from '../images/peoples/p4.jpg'
 
 // import Swiper core and required modules
 import {  Pagination } from 'swiper/modules';

@@ -131,3 +131,4 @@ export default function IotSol_Details() {
     </>
   );
 }
+

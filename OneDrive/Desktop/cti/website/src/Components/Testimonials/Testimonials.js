@@ -17,8 +17,10 @@ import 'swiper/css/pagination';
 
 export default function Testimonials() {
   return (
+    <>
+    <hr className='testimonial_hr' />
     <section id='testimonials'>
-    <h1 style={{color: "var(--color-blue)",textAlign:'center'}}>Testimonials</h1>
+    <h1 className='test__head' >Testimonials</h1>
 
         <Swiper 
          // install Swiper modules
@@ -29,7 +31,7 @@ export default function Testimonials() {
       navigation
       pagination={{ clickable: true }}
      
-        className='container testimonials__container'>
+        className='container__test testimonials__container'>
          
             <SwiperSlide className='testimonial'>
                 <div className='client__avatar'>                    
@@ -65,6 +67,7 @@ export default function Testimonials() {
            
         </Swiper>
     </section>
+    </>
   )
 }
 

@@ -57,7 +57,7 @@ export default function Footer() {
                   fontSize: '0.8rem'
                 }}
               >
-                Landline:<br/>+91 1493-294877
+                Landline:<br/>+91 1493-452877
               </h4>
             </div>
   

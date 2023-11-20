@@ -23,6 +23,10 @@
         height: 5rem;
     }
 
+    .card-body{
+        height: auto;
+    }
+    
     .cardcontent{
         display: block;
         margin: 0;
