@@ -8,7 +8,7 @@ export default function ServiceSection() {
       <div id="consult_services">
         <div className="auto__head" style={{ margin: "auto" }}>
           <div className="auto__heading">
-            <h2>
+            <h2 style={{textAlign:'center'}}>
               <span style={{ color: "var(--color-primary)" }}>OUR </span>
               SERVICES
             </h2>

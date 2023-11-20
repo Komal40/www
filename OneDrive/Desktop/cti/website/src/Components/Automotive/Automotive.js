@@ -23,7 +23,7 @@ export default function Automotive() {
     <div id="automotive">
       <div className="auto__head">
         <div className="auto__heading">
-          <h2>
+          <h2 style={{textAlign:'center'}}>
             AUTOMOTIVE{" "}
             <span style={{ color: "var(--color-primary)" }}>SOLUTIONS</span>
           </h2>
