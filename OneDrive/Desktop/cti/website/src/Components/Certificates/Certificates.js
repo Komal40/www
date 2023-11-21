@@ -39,20 +39,20 @@ export default function Certificates() {
 
 <div className='certificate__img'> 
     <div className='certificate__left'>
-    <h4 style={{textTransform:'uppercase', fontWeight:'600'}}>CE</h4>
+    <h4 style={{fontWeight:'600'}}>CE</h4>
     <a style={{color:'var(--color-primary)'}} href={ce} target="_blank">
         <img src={ce}/></a>
     </div>
 
 
     <div className='certificate__right'>
-    <h4 style={{textTransform:'uppercase', fontWeight:'600'}}>ISO</h4>
+    <h4 style={{ fontWeight:'600'}}>ISO</h4>
     <a style={{color:'var(--color-primary)'}} href={iso} target="_blank">
     <img src={iso}/></a>
     </div>
 
     <div className='certificate__mid'>
-    <h4 style={{textTransform:'uppercase', fontWeight:'600'}}>RoHS</h4>
+    <h4 style={{fontWeight:'600'}}>RoHS</h4>
     <a style={{color:'var(--color-primary)'}} href={rohs} target="_blank">
     <img src={rohs}/></a>
     </div>
