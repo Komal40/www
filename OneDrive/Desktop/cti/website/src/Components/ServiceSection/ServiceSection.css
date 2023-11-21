@@ -15,14 +15,16 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add smooth transition */
   }
 
-  @media screen and (max-width:600px) {
+  @media screen and (max-width:650px) {
     .card-body img{
         margin: 1px auto;
     }
     .card2{
         height: 5rem;
     }
-
+    .card-body {
+        padding: 20px;
+    }
 
 
     .cardcontent{
@@ -61,6 +63,7 @@
 @media screen and (max-width:1024px){
     .card-body{
         height: auto;
+        padding: 10px 30px
     }
 }
 
