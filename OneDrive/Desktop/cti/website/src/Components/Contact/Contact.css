@@ -60,7 +60,9 @@ box-sizing: border-box;
     .contact_details{
         margin-top: 2.5em;
     }
+
 }
+
 
 
 @media screen and (max-width:796px) {
@@ -73,6 +75,11 @@ box-sizing: border-box;
     
 }
 
+@media (min-width:1000px) and (max-width:1800px) {
+    .contact_details{
+        margin-left: 8em;
+    }
+}
 
 @media screen and (max-width:990px) {
     #contact_parent{
@@ -94,6 +101,7 @@ box-sizing: border-box;
         padding: 0;
         margin: 0;
     }
+
    
   }
   
