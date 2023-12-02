@@ -215,16 +215,16 @@ const scrollToSection = (sectionId, presentPage, toGo) => {
                           aria-haspopup="true"
                           aria-expanded="false"
                         >
-                          <HashLink to="/#automotive">Automotive Solution</HashLink>
+                          <HashLink to="/#automotive" smooth>Automotive Solution</HashLink>
                         </a>
                         <ul class="dropdown-menu dropdown-submenu">
                           <li>
                             <a class="dropdown-item">
-                              <HashLink to='/autoDetails#autosar'>Autosar</HashLink></a>
+                              <HashLink to='/autoDetails#autosar' smooth onClick={toggleMenus}>Autosar</HashLink></a>
                           </li>
                           <li>
                             <a class="dropdown-item">
-                              <HashLink to='/autoDetails#embedded'>Embedded</HashLink></a>
+                              <HashLink to='/autoDetails#embedded' smooth onClick={toggleMenus}>Embedded</HashLink></a>
                           </li>
                         </ul>
                       </li>
@@ -256,7 +256,7 @@ const scrollToSection = (sectionId, presentPage, toGo) => {
 
                       <li>
                         <a class="dropdown-item" >
-                          <HashLink to='/#resource'>Resource Deployment</HashLink>
+                          <HashLink to='/#resource' onClick={toggleMenus}>Resource Deployment</HashLink>
                         </a>
                       </li>
                     </div>
@@ -292,6 +292,7 @@ const scrollToSection = (sectionId, presentPage, toGo) => {
                        {/* onClick={() => scrollToSection('led_lights',window.location.pathname, '/')}> */}
                         <HashLink
                           to="/products#led_lights" smooth
+                          onClick={toggleMenus}
                         >
                           LED Lights
                         </HashLink>
@@ -301,6 +302,7 @@ const scrollToSection = (sectionId, presentPage, toGo) => {
                         {/* onClick={() => scrollToSection('smart_farming',window.location.pathname,'/')}> */}
                         <HashLink
                         to="/products#smart_farming" smooth
+                        onClick={toggleMenus}
                         >
                           Smart Farming Devices
                         </HashLink>
@@ -310,6 +312,7 @@ const scrollToSection = (sectionId, presentPage, toGo) => {
                         {/* onClick={() => scrollToSection('home_automation', window.location.pathname, '/')}> */}
                         <HashLink                        
                          to="/products#home_automation" smooth
+                         onClick={toggleMenus}
                          >
                           Home Automation
                         </HashLink>
@@ -318,6 +321,7 @@ const scrollToSection = (sectionId, presentPage, toGo) => {
                         {/* onClick={() => scrollToSection('hardware', window.location.pathname, '/')}> */}
                         <HashLink 
                         to="/products#hardware" smooth
+                        onClick={toggleMenus}
                        >
                           Automotive Hardware
                           </HashLink>
@@ -348,7 +352,7 @@ const scrollToSection = (sectionId, presentPage, toGo) => {
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                       <a class="dropdown-item">
-                        <Link to="/present">Our Story</Link>
+                        <Link to="/present"  onClick={toggleMenus}>Our Story</Link>
                       </a>
 
                       <a class="dropdown-item">
