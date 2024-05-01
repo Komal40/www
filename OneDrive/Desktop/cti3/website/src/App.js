@@ -30,6 +30,9 @@ import ContFoot from "./Components/ContFoot/ContFoot";
 import Prod_Foot from "./Components/NewProducts/Prod_Foot";
 import Presentation from "./Components/Navbar/Presentation";
 import Career from "./Components/Career/Career";
+import CertificateSection from "./Components/CertificateSection/CertificateSection";
+import Ratings from "./Components/Ratings/Ratings";
+import Register from "./Components/Registration/Register/Register";
 
 
 
@@ -77,6 +80,8 @@ const App = () => {
        <Route path='/contact' element={<ContFoot/>} />
        <Route path='/present' element={<Presentation/>}/>
        <Route path='/career' element={<Career/>}/>
+       <Route path='/register' element={<Register/>}/>
+       <Route path='/certificates' element={<CertificateSection/>}/>
      </Routes>
    </Router>
   )

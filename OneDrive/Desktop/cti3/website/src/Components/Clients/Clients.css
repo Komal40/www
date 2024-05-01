@@ -36,5 +36,24 @@ strong, h2{
 
 
 
+.marquee {
+  display: flex;
+  overflow: hidden;
+}
+
+.marquee img {
+  margin-right: 20px; /* Adjust spacing between images */
+  animation: scrollAnimation 60s linear infinite; /* Set animation properties */
+}
+
+@keyframes scrollAnimation {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
 
 

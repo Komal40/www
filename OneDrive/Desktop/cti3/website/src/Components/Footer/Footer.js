@@ -5,37 +5,44 @@ import call from "../imgs/home/call.png"
 import mail from "../imgs/home/mail.png"
 import ctii from '../Images/ctii.png'
 import whts from "../imgs/home/whats.png"
+import { HashLink } from 'react-router-hash-link'
+import { Link } from 'react-router-dom'
 
 
 export default function Footer() {
+
+  const toggleMenus = () => {
+    window.scrollTo(0, 0);
+  };
+
   return (
 <>
 <div class="footer-container">
         <div class="footer-top" >
             <div class="mainmf-c-1" >
                 <img src={ctii} style={{backgroundColor: '#00000000', height:"80px", marginLeft:'3em'}} />
-                <h3>CELLUS TECH INDIA is all LED lighting solution provider company with the focus on energy efficient LED based lighting system and energy conservation. The company envisages a green future by embracing innovative, intelligent lighting solutions, green technology that contributes towards reducing carbon emission. Our extensive product portfolio includes architectural and commercial and household LEDs.</h3>
+                <h3>CELLUS TECH INDIA is all LED lighting, innovative technology and solution provider company with the focus on smart IoT based energy efficient devices. LED based lighting system and energy conservation. The company envisages a green future by embracing innovative, intelligent lighting solutions, green technology that contributes towards reducing carbon emission. Our extensive product portfolio includes architectural and commercial and household LEDs.</h3>
 
             </div>
             <div class="mf-c-1" id="alright">
-            <a href="/">
+            <HashLink to="/" onClick={toggleMenus}>
                     <h4>Home</h4>
-                    </a>
-                <a href="/autoDetails">
+                    </HashLink>
+                <HashLink to="/#automotive">
                 <h4>Automotive Solutions</h4>
-                </a>
-                    <a href="/iotDetails">
+                </HashLink>
+                    <Link to="/iotDetails" onClick={toggleMenus}>
                     <h4>IIoT Solutions</h4>
-                </a>
-                <a href="/products">
+                </Link>
+                <HashLink to="/products" onClick={toggleMenus}>
                     <h4>Electronic Products</h4>
-                </a>
-                <a href="/consulting">
-                    <h4>Consulting Services</h4>
-                </a>
-                <a href="/contact">
+                </HashLink>
+                {/* <HashLink to="/career">
+                    <h4>Career</h4>
+                </HashLink> */}
+                <HashLink to="/#incontact_section">
                     <h4>Contact Us</h4>
-                </a>
+                </HashLink>
                 
                 </div>
             <div

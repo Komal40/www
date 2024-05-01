@@ -1,5 +1,5 @@
 
-import React from 'react'
+import React, { useRef } from 'react'
 import './TeamSection.css'
 import neha from '../Images/neha.jpg'
 import naveen from '../Images/naveen.jpg'
@@ -16,6 +16,15 @@ import ansari from '../Images/ansari.jpg'
 
 export function TeamSection(){
 
+    const teamRef = useRef(null);
+
+  const scrollLeft = () => {
+    teamRef.current.scrollLeft -= 200; // Adjust the scroll distance as needed
+  };
+
+  const scrollRight = () => {
+    teamRef.current.scrollLeft += 200; // Adjust the scroll distance as needed
+  };
 
 const details=[
     {
@@ -38,21 +47,21 @@ const details=[
         name:"Seema Rani",
         occupation:"Plant Head"   
     },
-    {
-        img:ansari,
-        name:"Abdul Raheem Ansari",
-        occupation:"R & D Head"   
-    },
+    // {
+    //     img:ansari,
+    //     name:"Abdul Raheem Ansari",
+    //     occupation:"R & D Head"   
+    // },
     {
         img:vikram,
         name:"Vikram Kumar",
         occupation:"Senior Engineer"   
     }, 
-    {
-        img:neha,
-        name:"Neha (HR)",
-        occupation:"Resource Management"   
-    },
+    // {
+    //     img:neha,
+    //     name:"Neha (HR)",
+    //     occupation:"Resource Management"   
+    // },
     {
         img:bagga,
         name:"Bagga Singh",
@@ -71,13 +80,13 @@ const details=[
         <div id='team__section'>
         {/* <h3 style={{display:'flex',  justifyContent:'center', color:'white'}}><strong>Meet Our Team</strong></h3> */}
         
-        <div className="team__heading">
+        <div className="team__heading ">
           <h2 style={{color:'white'}}>
             OUR <span style={{ color: "var(--color-primary)" }}>TEAM</span>
           </h2>
         </div>
 
-        <div className='Team_parent'>
+        <div className='Team_parent items' ref={teamRef}>
            {details.map(ele=>(
             <div className='Team_card'>
             <img src={ele.img}/>
@@ -92,10 +101,14 @@ const details=[
                 ))}
            </div> */}
         </div>
+        <button className="scroll-btn left" onClick={scrollLeft}>{'<'}</button>
+        <button className="scroll-btn right" onClick={scrollRight}>{'>'}</button>
         </div>
         {/* <div className='teams__'></div> */}
         </>
     )
 }
+
+
 
 

@@ -7,7 +7,7 @@ import cu from "../Images/controlunits.png";
 import hw from "../Images/hwDesign.png";
 import Footer from "../Footer/Footer";
 import compLine from "../Images/compLine.png";
-import embed from "../Images/embed.jpeg";
+import embed from "../Images/embedsw.jpeg";
 import sfd from "../Images/sfd.jpg";
 import qas from "../Images/qas.jpg";
 import pcb from "../Images/pcb.jpg";

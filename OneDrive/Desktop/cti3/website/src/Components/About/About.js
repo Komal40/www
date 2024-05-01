@@ -3,7 +3,7 @@ import img1 from "../imgs/services/check.webp";
 import img6 from "../imgs/services/choose2.png";
 import img5 from "../imgs/services/about3.png";
 import compLine from "../Images/compLine.png";
-import about2 from '../Images/about2.avif';
+import about2 from "../Images/abouut.png";
 import about from "../Images/about_us.jpg";
 import "./About.css";
 
@@ -22,20 +22,33 @@ export default function About() {
               </div>
             </div>
             <h1 style={{ marginTop: "-6rem", fontWeight: "400" }}>
-              CELLUS TECH INDIA stands at the forefront of the LED lighting
-              industry, distinguished as a comprehensive solution provider. Our
-              core focus lies in crafting energy-efficient lighting systems
-              driven by LED technology, a beacon of sustainable illumination. We
-              are impassioned by a vision of a greener tomorrow, where
-              innovative and intelligent lighting solutions lead the charge in
-              curbing carbon emissions.
-              <br />
-              <br />
-              Our expansive product portfolio spans across architectural,
-              commercial, and household LEDs, offering versatile options
-              tailored to diverse lighting needs. From enhancing the aesthetic
-              appeal of spaces to boosting energy conservation efforts, our
-              solutions are engineered to deliver excellence.
+              Since our establishment in 2014, we have positioned ourselves as a
+              trailblazer in the technology landscape, specializing in embedded
+              software solutions across diverse industries. Our expertise spans
+              Automotive ECUs with a keen focus on AUTOSAR compliance,
+              reflecting our commitment to driving innovation in the automotive
+              sector.As we celebrate our 10th anniversary, we're grateful for the journey and look forward to shaping the future of technology.
+
+              <br /><br/>
+              In Smart Farming and Smart City domains, we optimize agricultural
+              practices and urban ecosystems, respectively, employing advanced
+              embedded software to enhance efficiency and sustainability. We
+              extend our influence to LED lighting, HVAC systems, Cooling and
+              Storage solutions, Solar Lighting Systems, Irrigation Solutions,
+              Greenhouses, STP Automation, Industrial Automation, Motor Drives,
+              Automation for Assembly Lines, and Vehicle Fitness Testing &
+              Automation.
+              <br /><br/>
+              Our solutions empower industries by combining cutting-edge
+              technology with precision engineering, ensuring seamless
+              integration and optimal performance. Whether it's enhancing energy
+              efficiency in LED lighting, enabling precise climate control in
+              HVAC, or automating assembly lines, our embedded software
+              solutions are at the forefront of driving advancements. Through
+              our commitment to excellence and innovation, we continue to shape
+              the future of multiple domains, delivering state-of-the-art
+              solutions that elevate industry standards and contribute to a more
+              connected, efficient, and sustainable world.
               <br />
               <br />
               {/* In addition to our cutting-edge products, we pride ourselves on a commitment to unparalleled customer service. We consider the journey with our clients to extend far beyond the sale, placing utmost importance on lasting relationships. This dedication is woven into our DNA, ensuring that our customers receive unwavering support and expertise, fostering a reputation of excellence that defines CELLUS TECH INDIA in the industry. */}
@@ -91,28 +104,36 @@ export default function About() {
           </div>
           <div class="o-i-left reveal-top">
             <ol start="2">
-              <li>WHY CHOOSE WE</li>
+              <li>Why Choose Us</li>
             </ol>
             {/* <!-- <h3 class="reveal-top">Day 1: Understand and select</h3> --> */}
             <h2
               class="reveal-top"
               style={{ color: "black", fontWeight: "400" }}
             >
-              The mission of CELLUS TECH INDIA is anchored in becoming the
-              foremost purveyor of cutting-edge, high-quality lighting solutions
-              for commercial, municipal, and utility sectors. Our relentless
-              pursuit is to furnish our customers and their clients with
-              consistently superior value, setting new industry standards.
               <br />
               <br />
-              We are resolute in our commitment to delivering an unmatched level
-              of service that spans the entire customer journey - from pre-sales
-              inquiries to post-purchase support. This dedication reflects in
-              the enduring relationships we cherish with our customers. We take
-              immense pride in being a trusted partner in their endeavors,
-              always striving to exceed expectations. By doing so, we not only
-              provide illumination but also light the path towards enduring
-              partnerships and mutual success.
+              The mission of CELLUS TECH INDIA is deeply rooted in our
+              aspiration to become the premier provider of cutting-edge,
+              high-quality lighting solutions tailored for industrial and
+              high-performance applications. We dedicate ourselves to setting
+              new benchmarks in the industry, delivering excellence for the
+              commercial, municipal, and utility sectors. Our unwavering
+              commitment extends across the entire customer journey, from
+              pre-sales inquiries to post-purchase support. This commitment is
+              evident in the enduring relationships we cultivate with our
+              customers. We take immense pride in being a trusted partner in
+              their industrial endeavors, always striving to exceed
+              expectations.
+              <br />
+              <br />
+              <br />
+              <br /> At CELLUS TECH INDIA, we don't just provide illumination;
+              we illuminate the path toward enduring partnerships and mutual
+              success. Our focus on industrial and high-quality products
+              underscores our dedication to delivering lighting solutions that
+              not only meet but exceed the rigorous demands of the modern
+              industrial landscape.
             </h2>
           </div>
         </div>

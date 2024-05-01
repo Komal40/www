@@ -6,6 +6,7 @@
     font-family: 'Poppins',"Sans-serif";
 }
 html{
+  /* overflow: scroll; */
   scroll-behavior: smooth;
 }
 :root{

@@ -1,13 +1,18 @@
-#consult_services{
-    
+
+#consult_services{    
     display: flex;
     flex-wrap: wrap;
     /* width: 18rem; */
     background-color: var(--color-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
 /* .card{
     background-color:'whitesmoke';
 } */
+
 .card:hover {
     transform: scale(1.05); /* Increase the size of the card */
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */

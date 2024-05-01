@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import "./Products.css";
 import compLine from "../Images/compLine.png";
-import { Link } from 'react-router-dom';
-
+import { Link } from "react-router-dom";
 
 export default function Products() {
   const arr = [
@@ -43,10 +42,10 @@ export default function Products() {
       src: "https://www.cellustechindia.com/img/08.jpg",
     },
     {
-        id:7,
-    category:'IIOT Services',
-    desc:'Emburse Cards Dashboard the Card will show two lines, but only the first and last name of the assigned cardholder will print on the card',
-        src:'https://www.cellustechindia.com/img/04.jpg'
+      id: 7,
+      category: "IIOT Services",
+      desc: "Emburse Cards Dashboard the Card will show two lines, but only the first and last name of the assigned cardholder will print on the card",
+      src: "https://www.cellustechindia.com/img/04.jpg",
     },
     {
       id: 8,
@@ -181,10 +180,9 @@ export default function Products() {
   ];
 
   const handleProductClick = (selectedProduct) => {
-    localStorage.setItem('selectedProduct', JSON.stringify(selectedProduct));
-    console.log('Selected Product:', selectedProduct);
+    localStorage.setItem("selectedProduct", JSON.stringify(selectedProduct));
+    console.log("Selected Product:", selectedProduct);
   };
-
 
   const [items, subItems] = useState(arr);
   const [activeButton, setActiveButton] = useState(null);
@@ -210,11 +208,13 @@ export default function Products() {
 
         <div className="iotSol__text">
           <p>
-          Our products are also available at amazon.in , flipkart.com, snapdeal.com, shopclues.com, meesho.com and paytm.com for online selling.
+            Our products are also available at amazon.in , flipkart.com,
+            snapdeal.com, shopclues.com, meesho.com and paytm.com for online
+            selling.
           </p>
         </div>
 
-  {/* <div className="button_products">
+        {/* <div className="button_products">
           <button
             type="button"
             className={`btn btn-outline-primary ${
@@ -304,25 +304,26 @@ export default function Products() {
         </div>  */}
 
         <div className="products">
-
           {items.map((item) => (
-            <div
-              className="card "
-              key={item.id}
-            >
+            <div className="card " key={item.id}>
               <img
                 style={{ height: "14rem", width: "18rem" }}
                 src={item.src}
                 className="card-img-top"
-                alt={item.category}                
+                alt={item.category}
                 // onClick={() => handleProductClick(item)}
               />
               <div className="overlay">
-                <h5 style={{fontWeight:'900'}}>{item.category}</h5>
-                <Link to='/product'>
-                <button type='button' className="btn btn-primary" onClick={() => handleProductClick(item)} ><strong >+</strong></button>
-                </Link>        
-               
+                <h5 style={{ fontWeight: "900" }}>{item.category}</h5>
+                <Link to="/product">
+                  <button
+                    type="button"
+                    className="btn btn-primary"
+                    onClick={() => handleProductClick(item)}
+                  >
+                    <strong>+</strong>
+                  </button>
+                </Link>
               </div>
             </div>
           ))}
@@ -331,6 +332,3 @@ export default function Products() {
     </div>
   );
 }
-
-
-

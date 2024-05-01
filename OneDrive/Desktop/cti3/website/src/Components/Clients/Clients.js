@@ -87,6 +87,9 @@ import inter from '../Images/interface.png'
 import goi from '../Images/goi.png'
 import dlf from '../Images/dlf.png'
 import hli from '../Images/hli.png'
+import indis from '../Images/indis.png'
+import gtekt from '../Images/gtekt.jpg'
+
 
 export default function Clients() {
   return (
@@ -107,6 +110,7 @@ export default function Clients() {
               <img src={auto_mm} />
               <img src={auto_mfe} />
               <img src={inter} />
+              <img src={indis}/>
               <img src={goi} />
               <img src={hli}/>
             </marquee>
@@ -224,6 +228,7 @@ export default function Clients() {
               <img src={usg} />
               <img src={db} />
               <img src={om}/>
+              <img src={gtekt}/>
             </marquee>
           </div>
           
@@ -232,6 +237,8 @@ export default function Clients() {
     </div>
   );
 }
+
+
 
 
 

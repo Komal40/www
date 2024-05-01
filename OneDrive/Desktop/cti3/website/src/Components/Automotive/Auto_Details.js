@@ -12,7 +12,7 @@ import model from '../Images/model.jpg';
 import Footer from "../Footer/Footer";
 import compLine from "../Images/compLine.png";
 import fs from '../Images/fs.jpg'
-import embed from "../Images/embed.jpeg";
+import embed from "../Images/embedsw.jpeg";
 import smartcar from '../Images/smartcar.jpg'
 import auto from '../Images/auto.png'
 // import firmware from '../Images/firmware.jpg'

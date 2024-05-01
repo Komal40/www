@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Footer from "../Footer/Footer";
+import axios from "axios";
 import emailjs from "@emailjs/browser";
 import check from "../Images/check.svg";
 import bgfg from "../Images/bgfg.svg";
@@ -18,21 +19,22 @@ export default function Career() {
   const [email, setEmail] = useState("");
   const [file, setFile] = useState("");
   const [msg, setMsg] = useState("");
+  const [exp, setExp]=useState("")
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Your EmailJS service ID, template ID, and Public Key
-    const serviceId = "service_u8cqqgq";
-    const templateId = "template_wpwg2zf";
-    const publicKey = "3au-CjZwckJsyxfp-";
+  // Your EmailJS service ID, template ID, and Public Key
+    const serviceId = "service_mral58r";
+    const templateId = "template_e65j1si";
+    const publicKey = "KUmnUDKNOkz1DJ9_b";
 
     // Create a new object that contains dynamic template params
     const templateParams = {
       from_name: fname + " " + lname,
       from_email: email,
-      to_name: "Applying for Role",
-      message: msg + file,
+      to_name: "CTI",
+      message: exp+" " +msg + " Resume Link-> "+file,
     };
 
     emailjs
@@ -43,11 +45,69 @@ export default function Career() {
         setLname("");
         setEmail("");
         setMsg("");
+        setFile("");
+        setExp("")
       })
       .catch((error) => {
         console.error("Error sending email:", error);
       });
   };
+
+
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  
+  //   // Your EmailJS service ID, template ID, and Public Key
+  //   const serviceId = "service_mral58r";
+  //   const templateId = "template_e65j1si";
+  //   const publicKey = "KUmnUDKNOkz1DJ9_b";
+  
+  //   try {
+  //     // Create a new FormData object to handle file attachments
+  //     const formData = new FormData();
+  //     formData.append("service_id", serviceId);
+  //     formData.append("template_id", templateId);
+  //     formData.append("user_id", publicKey);
+  //     formData.append("template_params", JSON.stringify({
+  //       from_name: fname + " " + lname,
+  //       from_email: email,
+  //       to_name: "CTI",
+  //       message: msg,
+  //     }));
+  
+  //     // Check if the 'file' state is not null or undefined
+  //     if (file && file.files && file.files[0]) {
+  //       formData.append("file", file.files[0]);
+  //     }
+  
+  //     // Use fetch to send a POST request
+  //     // const apiUrl = "https://api.emailjs.com/api/v1.0/email/send-form";
+  //     const response = await fetch(`https://api.emailjs.com/api/v1.0/email/send-form/service_mral58r/template_e65j1si`, {
+  //       method: "POST",
+  //       headers: {
+  //         Authorization: `Bearer ${publicKey}`,
+  //       },
+  //       body: formData,
+  //     });
+  
+  //     if (!response.ok) {
+  //       throw new Error(`Error sending email: ${response.statusText}`);
+  //     }
+  
+  //     const responseData = await response.json();
+  //     console.log("Email sent successfully!", responseData);
+  
+  //     // Clear form fields
+  //     setFname("");
+  //     setLname("");
+  //     setEmail("");
+  //     setMsg("");
+  //     setFile("");
+  //   } catch (error) {
+  //     console.error("Error sending email:", error.message);
+  //   }
+  // };
+  
 
   return (
     <>
@@ -91,9 +151,11 @@ export default function Career() {
                             class="flex-grow h-10 appearance-none border-none m-0 p-0 bg-transparent focus:ring-0"
                             id=":rg:"
                             value={fname}
+                            required
                             onChange={(e) => setFname(e.target.value)}
                           />
                         </div>
+                        
                       </div>
                       <div class="flex flex-col gap-2">
                         <label for=":rh:" class="font-medium text-gray-600">
@@ -112,11 +174,14 @@ export default function Career() {
                             class="flex-grow h-10 appearance-none border-none m-0 p-0 bg-transparent focus:ring-0"
                             id=":rh:"
                             value={lname}
+                            required
                             onChange={(e) => setLname(e.target.value)}
                           />
                         </div>
                       </div>
                     </div>
+
+
                     <div class="flex flex-col gap-2">
                       <label for=":ri:" class="font-medium text-gray-600">
                         <span>Email</span>
@@ -132,6 +197,7 @@ export default function Career() {
                         <input
                           // autocomplete="email"
                           type="email"
+                          required
                           class="flex-grow h-10 appearance-none border-none m-0 p-0 bg-transparent focus:ring-0"
                           id=":ri:"
                           value={email}
@@ -140,26 +206,56 @@ export default function Career() {
                       </div>
                     </div>
 
-                    <div class="flex flex-col gap-2">
-                      <label for=":ri:" class="font-medium text-gray-600">
-                        <span>Upload resume</span>
-                        <span
-                          aria-hidden="true"
-                          
-                        >
-                          &nbsp;*
-                        </span>
-                      </label>
-                      <div class="flex items-center gap-x-2 px-4 rounded bg-gray-100 border-2 border-gray-100 focus:outline-none focus-within:ring-1 focus-within:ring-gray-400">
-                        <input
-                          type="file"
-                          class="flex-grow h-10 appearance-none border-none m-0 p-0 bg-transparent focus:ring-0"
-                          id=":ri:"
-                          value={file}
-                          onChange={(e) => setFile(e.target.value)}
-                        />
+
+
+
+                    <div>
+                      <div class="flex flex-col gap-2">
+                        <label for=":rj:" class="font-medium text-gray-900">
+                          <span>How many years of experience do you have, and what is your expected salary?</span>
+                          <span
+                            aria-hidden="true"
+                            class="text-red-1000 select-none"
+                          >
+                            &nbsp;*
+                          </span>
+                        </label>
+                        <div class="flex items-center gap-x-2 px-4 rounded bg-gray-100 border-2 border-gray-100 focus:outline-none focus-within:ring-1 focus-within:ring-gray-400">
+                          <input
+                            type="text"
+                            // autocomplete="new-password"
+                            class="flex-grow h-10 appearance-none border-none m-0 p-0 bg-transparent focus:ring-0"
+                            id=":rj:"
+                            value={exp}
+                            onChange={(e) => setExp(e.target.value)}
+                          />
+
+                          <div class="flex-shrink-0">
+                            <div class="flex items-center gap-x-2">
+                              <button
+                                class="block w-6 h-6 text-gray-300"
+                                type="button"
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 20 20"
+                                  fill="currentColor"
+                                  aria-hidden="true"
+                                >
+                                  <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path>
+                                  <path
+                                    fill-rule="evenodd"
+                                    d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z"
+                                    clip-rule="evenodd"
+                                  ></path>
+                                </svg>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
+                    
                     <div>
                       <div class="flex flex-col gap-2">
                         <label for=":rj:" class="font-medium text-gray-900">
@@ -206,6 +302,28 @@ export default function Career() {
                         </div>
                       </div>
                     </div>
+
+                    <div class="flex flex-col gap-2">
+                      <label for=":ri:" class="font-medium text-gray-600">
+                        <span>Upload resume Link</span>
+                        <span
+                          aria-hidden="true"                          
+                        >
+                          &nbsp;*
+                        </span>
+                      </label>
+                      <div class="flex items-center gap-x-2 px-4 rounded bg-gray-100 border-2 border-gray-100 focus:outline-none focus-within:ring-1 focus-within:ring-gray-400">
+                        <input
+                          type="text"
+                          required
+                          class="flex-grow h-10 appearance-none border-none m-0 p-0 bg-transparent focus:ring-0"
+                          id=":ri:"
+                          value={file}
+                          onChange={(e) => setFile(e.target.value)}
+                        />
+                      </div>
+                    </div>
+
                   </fieldset>
 
                   {/* <fieldset class="grid gap-y-2"> */}

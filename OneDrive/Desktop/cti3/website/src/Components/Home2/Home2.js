@@ -16,8 +16,8 @@ export default function Home2() {
 
         <div className="home2__text">
           <p style={{color:'black'}}>
-            An <span style={{color:'var(--color-primary)'}}>ISO 9001:2015</span>, CE, RoHS Certified Company Trademark Registered,
-            Startup India Registered
+            An <span style={{color:'var(--color-primary)'}}>ISO 9001:2015</span>, CE, RoHS Certified Company...
+            <br/> Trademark and Startup India Registered
           </p>
           {/* <img src={logo} className="home2__logo" /> */}
         </div>

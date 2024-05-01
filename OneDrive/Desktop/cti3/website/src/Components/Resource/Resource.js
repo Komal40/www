@@ -37,9 +37,10 @@ export default function Resource() {
 
       <div className="iotSol__text">
         <p>
-          Efficiently allocate human expertise, financial investments, and
+          {/* Efficiently allocate human expertise and
           technological assets to maximize productivity, foster innovation, and
-          achieve organizational goals through strategic resource allocation.
+          achieve organizational goals through strategic resource allocation. */}
+          We Associates with organisation to Depute out expertised resources as services for Multiple Domain.
         </p>
       </div>
 
@@ -58,7 +59,7 @@ export default function Resource() {
           <span class="close"></span>
           <span class="arrow"></span>
           <article>
-            <h2>Embedded</h2>
+            <h2>Embedded<br/> Design</h2>
             <div
               class="pic"
               style={{
@@ -70,8 +71,7 @@ export default function Resource() {
             </div>
 
             <div class="desc">
-              Allocate resources for embedded systems with focus on testing,
-              security.
+              Development Domain with expertise into Linux, C, C++, MCU, ICU (HSM, HSE), microcontroller programming.
             </div>
           </article>
           {/* <!-- <div class="actions">
@@ -79,7 +79,7 @@ export default function Resource() {
        <button class="btn"><span>trade</span><img class="icon" src="https://rafaelavlucas.github.io/assets/icons/misc/trade.svg"></button>
      </div> --> */}
         </div>
-        <div class="card">
+        <div class="card" >
           <span class="close"></span>
           <span class="arrow"></span>
           <article>
@@ -109,14 +109,15 @@ export default function Resource() {
           {/* <!-- <div class="actions">
        <button class="btn"><span>like</span><img class="icon" src="https://rafaelavlucas.github.io/assets/icons/misc/heart.svg"></button>
        <button class="btn"><span>trade</span><img class="icon" src="https://rafaelavlucas.github.io/assets/icons/misc/trade.svg"></button>
- 
      </div> --> */}
+
         </div>
         <div class="card">
           <span class="close"></span>
           <span class="arrow"></span>
           <article>
-            <h2>Firmware</h2>
+            <h2>IIoT 
+              <br/>Solutions</h2>
             <div
               class="pic"
               style={{
@@ -128,15 +129,14 @@ export default function Resource() {
             </div>
 
             <div class="desc">
-              Allocate skilled developers, testing tools, and hardware resources
-              for efficient firmware development, ensuring functionality,
+              Allocate skilled developers and resources
+              for ensuring functionality,
               security, and optimal performance.
             </div>
           </article>
           {/* <!-- <div class="actions">
       <button class="btn"><span>like</span><img class="icon" src="https://rafaelavlucas.github.io/assets/icons/misc/heart.svg"></button>
       <button class="btn"><span>trade</span><img class="icon" src="https://rafaelavlucas.github.io/assets/icons/misc/trade.svg"></button>
-
     </div> --> */}
         </div>
 

@@ -23,98 +23,132 @@ export default function Navbar() {
 
   const toggleMenus = () => {
     window.scrollTo(0, 0);
-    setMenuOpen(!menuOpen);
+    setMenuOpen(false);
   };
 
+  //   const scrollToSection = (sectionId, presentPage, toGo) => {
 
-//   const scrollToSection = (sectionId, presentPage, toGo) => {
+  //     localStorage.setItem("elementID",sectionId)
+  //     const targetElement = document.getElementById(sectionId);
 
-//     localStorage.setItem("elementID",sectionId)
-//     const targetElement = document.getElementById(sectionId);
-  
-//     if (!targetElement) {
-//       console.error(`Element with id '${sectionId}' not found.`);
-//       return;
-//     }
-  
-    
-//     //var mycurrentpage = your current page path or name
-//     //var myscrollelementID = element where to scroll
-//     //setLocalStorageItem
-//     //var pageToGo = page where element is present
+  //     if (!targetElement) {
+  //       console.error(`Element with id '${sectionId}' not found.`);
+  //       return;
+  //     }
 
-//     //if(mycurrentpage == pageToGo){
-// //      scrollintoview
-//    // }else{
-//           //set local variable scrollPending = "sectionId"
-//           //first go to  pageToGO
-//           //HOME PAGE LOGIC
-//           //After loading is finished in homepage, check for pendingVariable
-//               //if(pendingVariable == none){}else{scrollintoview(ElementID)}
-//    //}
+  //     //var mycurrentpage = your current page path or name
+  //     //var myscrollelementID = element where to scroll
+  //     //setLocalStorageItem
+  //     //var pageToGo = page where element is present
 
+  //     //if(mycurrentpage == pageToGo){
+  // //      scrollintoview
+  //    // }else{
+  //           //set local variable scrollPending = "sectionId"
+  //           //first go to  pageToGO
+  //           //HOME PAGE LOGIC
+  //           //After loading is finished in homepage, check for pendingVariable
+  //               //if(pendingVariable == none){}else{scrollintoview(ElementID)}
+  //    //}
 
-//     const isHomePage=window.location.pathname==='/';
-  
-//     if (isHomePage) {
-//       targetElement.scrollIntoView({ behavior: 'smooth' });
-//     } 
-//     else if(presentPage==toGo){
-//       targetElement.scrollIntoView({ behavior: 'smooth' });
-//     }
-//     else {
-//       window.location.href=toGo
-//       window.onload = () => {
-//           targetElement.scrollIntoView({ behavior: 'smooth' });
-//         };
-//     }
-//   };
+  //     const isHomePage=window.location.pathname==='/';
 
+  //     if (isHomePage) {
+  //       targetElement.scrollIntoView({ behavior: 'smooth' });
+  //     }
+  //     else if(presentPage==toGo){
+  //       targetElement.scrollIntoView({ behavior: 'smooth' });
+  //     }
+  //     else {
+  //       window.location.href=toGo
+  //       window.onload = () => {
+  //           targetElement.scrollIntoView({ behavior: 'smooth' });
+  //         };
+  //     }
+  //   };
 
-const scrollToSection = (sectionId, presentPage, toGo) => {
-  localStorage.setItem("elementID", sectionId);
-  const targetElement = document.getElementById(sectionId);
+  // Add this to your existing JavaScript code
 
-  if (!targetElement) {
+  const toggleSubmenu = (event) => {
+    const targetElement = event.currentTarget;
+    const submenu = targetElement.querySelector(".dropdown-menu");
+
+    if (submenu) {
+      submenu.classList.toggle("show");
+    }
+  };
+
+  const closeSubmenus = () => {
+    const submenus = document.querySelectorAll(
+      ".dropdown-submenu .dropdown-menu"
+    );
+    submenus.forEach((submenu) => {
+      submenu.classList.remove("show");
+    });
+  };
+
+  const handleSubmenuClick = (event) => {
+    const isMobile = window.innerWidth <= 767;
+    if (isMobile) {
+      event.preventDefault();
+      toggleSubmenu(event);
+    }
+  };
+
+  // Attach event listeners to handle submenu behavior
+  document.querySelectorAll(".dropdown-submenu").forEach((submenu) => {
+    submenu.addEventListener("click", handleSubmenuClick);
+  });
+
+  // Close submenus when clicking outside the dropdown
+  document.addEventListener("click", (event) => {
+    if (!event.target.closest(".dropdown-submenu")) {
+      closeSubmenus();
+    }
+  });
+
+  const scrollToSection = (sectionId, presentPage, toGo) => {
+    localStorage.setItem("elementID", sectionId);
+    const targetElement = document.getElementById(sectionId);
+
+    if (!targetElement) {
       console.error(`Element with id '${sectionId}' not found.`);
       return;
-  }
+    }
 
-  const storedElementID = localStorage.getItem("elementID");
-  
-  if (storedElementID) {
+    const storedElementID = localStorage.getItem("elementID");
+
+    if (storedElementID) {
       localStorage.removeItem("elementID"); // Remove it after use or as needed
-      const isHomePage = window.location.pathname === '/';
-      
+      const isHomePage = window.location.pathname === "/";
+
       if (isHomePage || presentPage === toGo) {
-          targetElement.scrollIntoView({ behavior: 'smooth' });
+        targetElement.scrollIntoView({ behavior: "smooth" });
       } else {
-          window.location.href = toGo;
+        window.location.href = toGo;
 
-          // Listen for the load event on the new page
-          window.addEventListener('load', () => {
-              const pendingElement = document.getElementById(storedElementID);
-              if (pendingElement) {
-                  pendingElement.scrollIntoView({ behavior: 'smooth' });
-              }
-          });
+        // Listen for the load event on the new page
+        window.addEventListener("load", () => {
+          const pendingElement = document.getElementById(storedElementID);
+          if (pendingElement) {
+            pendingElement.scrollIntoView({ behavior: "smooth" });
+          }
+        });
       }
-  } else {
-      targetElement.scrollIntoView({ behavior: 'smooth' });
-  }
-};
-
+    } else {
+      targetElement.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   const handleDownload = () => {
     const downloadLink = document.createElement("a");
     downloadLink.href =
-      "https://docs.google.com/presentation/d/1TUHMXSVjGNO5IiucsAx_0gIWzh_QL0et/export/pptx";
+      "https://docs.google.com/presentation/d/1I_evdHSSdiIn00Lf1XRBu11oieOL-szD/export/pptx";
     downloadLink.download = "company_profile.pptx";
     document.body.appendChild(downloadLink);
     downloadLink.click();
     document.body.removeChild(downloadLink);
   };
-
 
   const downloadImage = (imageURL) => {
     // Create an anchor element and trigger the download of the image
@@ -143,9 +177,6 @@ const scrollToSection = (sectionId, presentPage, toGo) => {
       console.log(`Image not found for ${certification}`);
     }
   };
-
-
-
 
   useEffect(() => {
     const handleScroll = () => {
@@ -201,7 +232,7 @@ const scrollToSection = (sectionId, presentPage, toGo) => {
                       aria-haspopup="true"
                       aria-expanded="false"
                     >
-                      Services
+                      <Link>Services</Link>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                       {/* <Link to="/autoDetails"> */}
@@ -215,16 +246,36 @@ const scrollToSection = (sectionId, presentPage, toGo) => {
                           aria-haspopup="true"
                           aria-expanded="false"
                         >
-                          <HashLink to="/#automotive" smooth>Automotive Solution</HashLink>
+                          <HashLink
+                            to="/#automotive"
+                            smooth
+                            onClick={toggleMenus}
+                          >
+                            Automotive Solution
+                          </HashLink>
                         </a>
                         <ul class="dropdown-menu dropdown-submenu">
                           <li>
                             <a class="dropdown-item">
-                              <HashLink to='/autoDetails#autosar' smooth onClick={toggleMenus}>Autosar</HashLink></a>
+                              <HashLink
+                                to="/autoDetails#autosar"
+                                smooth
+                                onClick={toggleMenus}
+                              >
+                                Autosar
+                              </HashLink>
+                            </a>
                           </li>
                           <li>
                             <a class="dropdown-item">
-                              <HashLink to='/autoDetails#embedded' smooth onClick={toggleMenus}>Embedded</HashLink></a>
+                              <HashLink
+                                to="/autoDetails#embedded"
+                                smooth
+                                onClick={toggleMenus}
+                              >
+                                Embedded
+                              </HashLink>
+                            </a>
                           </li>
                         </ul>
                       </li>
@@ -243,20 +294,26 @@ const scrollToSection = (sectionId, presentPage, toGo) => {
                           aria-haspopup="true"
                           aria-expanded="false"
                         >
-                          <Link>IIoT Solution</Link>
+                          <Link to="/iotDetails" onClick={toggleMenus}>
+                            IIoT Solution
+                          </Link>
                         </a>
                         <ul class="dropdown-menu dropdown-submenu">
                           <li>
                             <a class="dropdown-item">
-                              <Link to="/iotDetails" onClick={toggleMenus} >other s/w services</Link>                    
+                              <Link to="/iotDetails" onClick={toggleMenus}>
+                                Other S/w Services
+                              </Link>
                             </a>
                           </li>
                         </ul>
                       </li>
 
                       <li>
-                        <a class="dropdown-item" >
-                          <HashLink to='/#resource' onClick={toggleMenus}>Resource Deployment</HashLink>
+                        <a class="dropdown-item">
+                          <HashLink to="/#resource" onClick={toggleMenus}>
+                            Resource Deployment
+                          </HashLink>
                         </a>
                       </li>
                     </div>
@@ -289,45 +346,71 @@ const scrollToSection = (sectionId, presentPage, toGo) => {
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                       <a class="dropdown-item">
-                       {/* onClick={() => scrollToSection('led_lights',window.location.pathname, '/')}> */}
+                        {/* onClick={() => scrollToSection('led_lights',window.location.pathname, '/')}> */}
                         <HashLink
-                          to="/products#led_lights" smooth
+                          to="/products#led_lights"
+                          smooth
                           onClick={toggleMenus}
                         >
                           LED Lights
                         </HashLink>
                       </a>
-
-                      <a class="dropdown-item" >
+                      {/* smart_city      solar_smart */}
+                      <a class="dropdown-item">
                         {/* onClick={() => scrollToSection('smart_farming',window.location.pathname,'/')}> */}
                         <HashLink
-                        to="/products#smart_farming" smooth
-                        onClick={toggleMenus}
+                          to="/products#smart_farming"
+                          smooth
+                          onClick={toggleMenus}
                         >
                           Smart Farming Devices
                         </HashLink>
                       </a>
+                      <a class="dropdown-item">
+                        {/* onClick={() => scrollToSection('smart_farming',window.location.pathname,'/')}> */}
+                        <HashLink
+                          to="/products#solar_smart"
+                          smooth
+                          onClick={toggleMenus}
+                        >
+                          {/* Sunwise Hub */}
+                          Turnkey Projects
+                        </HashLink>
+                      </a>
+                      <a class="dropdown-item">
+                        {/* onClick={() => scrollToSection('smart_farming',window.location.pathname,'/')}> */}
+                        <HashLink
+                          to="/products#smart_city"
+                          smooth
+                          onClick={toggleMenus}
+                        >
+                          Smart City Projects
+                        </HashLink>
+                      </a>
 
-                      <a class="dropdown-item" >
+                      <a class="dropdown-item">
                         {/* onClick={() => scrollToSection('home_automation', window.location.pathname, '/')}> */}
-                        <HashLink                        
-                         to="/products#home_automation" smooth
-                         onClick={toggleMenus}
-                         >
+                        <HashLink
+                          to="/products#home_automation"
+                          smooth
+                          onClick={toggleMenus}
+                        >
                           Home Automation
                         </HashLink>
                       </a>
-                      <a class="dropdown-item"  >
+                      <a class="dropdown-item">
                         {/* onClick={() => scrollToSection('hardware', window.location.pathname, '/')}> */}
-                        <HashLink 
-                        to="/products#hardware" smooth
-                        onClick={toggleMenus}
-                       >
+                        <HashLink
+                          to="/products#hardware"
+                          smooth
+                          onClick={toggleMenus}
+                        >
                           Automotive Hardware
-                          </HashLink>
+                        </HashLink>
                       </a>
                     </div>
                   </li>
+
                   <li>
                     <a>
                       <Link to="/career" onClick={toggleMenus}>
@@ -336,7 +419,6 @@ const scrollToSection = (sectionId, presentPage, toGo) => {
                     </a>
                   </li>
                   {/* <li><a ><Link to='/' onClick={toggleMenus}>Testing Tools</Link></a></li> */}
-
                   {/* <li><a href='https://www.cellustechindia.com/led-leaflet-new.pdf'>Brochure</a></li> */}
                   {/* <li><a href='#'><Link to='/present'>Our Story</Link></a></li> */}
                   <li class="nav-item dropdown">
@@ -352,11 +434,18 @@ const scrollToSection = (sectionId, presentPage, toGo) => {
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                       <a class="dropdown-item">
-                        <Link to="/present"  onClick={toggleMenus}>Our Story</Link>
+                        <Link to="/present" onClick={toggleMenus}>
+                          Our Story
+                        </Link>
                       </a>
 
                       <a class="dropdown-item">
-                        <HashLink to="/contact" onClick={toggleMenus}>Contact Us</HashLink>
+                        <HashLink
+                          to="/#incontact_section"
+                          onClick={toggleMenus}
+                        >
+                          Contact Us
+                        </HashLink>
                       </a>
 
                       <a class="dropdown-item">
@@ -374,7 +463,7 @@ const scrollToSection = (sectionId, presentPage, toGo) => {
                       aria-haspopup="true"
                       aria-expanded="false"
                     >
-                      Download
+                      <Link>Download</Link>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                       <a class="dropdown-item" onClick={handleDownload}>
@@ -382,8 +471,7 @@ const scrollToSection = (sectionId, presentPage, toGo) => {
                       </a>
 
                       {/* <Link to='/contact'><a class="dropdown-item">Product Catalog</a></Link> */}
-
-                      <li className="nav-item dropdown">
+                      {/* <li className="nav-item dropdown">
                         <a
                           className="nav-link dropdown-item dropdown-toggle"
                           id="navbarDropdown"
@@ -445,9 +533,29 @@ const scrollToSection = (sectionId, presentPage, toGo) => {
                             <a class="dropdown-item">Startup India</a>
                           </li>
                         </ul>
+                      </li> */}
+
+                      <li>
+                        <a class="dropdown-item">
+                          <HashLink
+                            to="/#certificates"
+                            onClick={toggleMenus}
+                            smooth
+                          >
+                            Certificates
+                          </HashLink>
+                        </a>
                       </li>
                     </div>
                   </li>
+
+                  {/* <li>
+                    <a>
+                      <Link to="/login" onClick={toggleMenus}>
+                        Sign In
+                      </Link>
+                    </a>
+                  </li> */}
 
                   {/* <li><a href='#'><Link to='/contact' onClick={toggleMenus}>Contact us</Link></a></li>    */}
                   <li>
@@ -460,8 +568,8 @@ const scrollToSection = (sectionId, presentPage, toGo) => {
             <Link to='/login'>
             <button >Login</button>
             </Link>
-            
             </div> */}
+
               {/* <div className='nav_skaio'>
               <img src={skaio}/>
             </div> */}

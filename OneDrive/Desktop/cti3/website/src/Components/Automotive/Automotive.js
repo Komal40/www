@@ -13,6 +13,7 @@ import hwd from '../Images/hwd.jpg'
 import ns from '../Images/ns.jpg'
 import smartcar from '../Images/smartcar.jpg'
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 
 export default function Automotive() {
@@ -49,9 +50,9 @@ export default function Automotive() {
         <Link to="/autoDetails" onClick={scrollToTop}>
           <button className="auto__explore">Explore More</button>
         </Link>
-        <Link to="/contact" onClick={scrollToTop}>
+        <HashLink to="/#incontact_section" onClick={scrollToTop} smooth>
           <button className="auto__consult">Consult Us</button>
-        </Link>
+        </HashLink>
       </div>
 
       <div className="auto__images">
@@ -134,3 +135,5 @@ export default function Automotive() {
     </section>
   );
 }
+
+

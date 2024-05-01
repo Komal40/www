@@ -34,7 +34,7 @@ import icee from '../Images/icee.jpg'
 import ledcl from '../Images/ledcl.jpg'
 import ctiled from '../Images/ctiled.jpg'
 import { Link } from 'react-router-dom';
-import indus_led from '../Images/indus_led.jpg'
+import indus_led from '../Images/indcti.jpeg'
 import indus_smart_led from '../Images/indus_smart_led.jpg'
 import dom_smart from '../Images/dom_smart.jpg'
 import ProductDetails from '../Products/ProductDetails';
@@ -42,25 +42,44 @@ import retrofit from '../Images/retrofit.jpg'
 import tp from '../Images/tp.jpg'
 import smartmotorcont from '../Images/smartmotorcont.avif'
 import smartambient from '../Images/smartambient.jpg'
-import simulator from '../Images/simulator.jpg'
+import simulator from '../Images/simulators.jpeg'
 import tt from '../Images/testtools.jpg'
+import smartwater from '../Images/smartwatermotoring.jpg'
+import streetlight from '../Images/streetlight.jpg'
+import homeauto from '../Images/homeautomation.jpg'
+import light from '../Images/smartlight.jpg'
+import ledlight from '../Images/ledlight.jpg'
+import smartmotor from '../Images/smartmotor.jpg'
+import asl from '../Images/smartledcti.jpeg'
+import tube from '../Images/cttii.jpeg'
+import hw from '../Images/meter.jpeg'
+import solarstreetlight from '../Images/solarstreetlight.jpeg'
+import grpleds from '../Images/grpleds.jpg'
+import indus from '../Images/in.jpeg'
+import starter from '../Images/starter.jpeg'
 
 
 const NewProducts=()=> {
     const arr = [
+        // {
+        //   id: 1,
+        //   category: "Autosar",
+        //   desc: "Multi-Core Safe Operating System and Autosar Classic Platform Consulting",
+        //   // src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShMpAC04VC2j4DEsGEyKNcTxcOnzM_QUYFfw&usqp=CAU",
+        //   src:auto
+        // },
+        // {
+        //   id: 2,
+        //   category: "IIoT Services",
+        //   desc: "We delivers IIoT solutions for asset tracking, machine monitoring and more for various industries.",
+        //   // src: "https://www.cellustechindia.com/img/iiot.jpg",
+        //   src:iiot
+        // },
         {
-          id: 1,
-          category: "Autosar",
-          desc: "Multi-Core Safe Operating System and Autosar Classic Platform Consulting",
-          // src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShMpAC04VC2j4DEsGEyKNcTxcOnzM_QUYFfw&usqp=CAU",
-          src:auto
-        },
-        {
-          id: 2,
-          category: "IIoT Services",
-          desc: "We delivers IIoT solutions for asset tracking, machine monitoring and more for various industries.",
-          // src: "https://www.cellustechindia.com/img/iiot.jpg",
-          src:iiot
+          id: 16,
+          category: "LED Lightning",
+          desc: "Energy-efficient, customizable color temperature, eco-friendly, and provides bright, flicker-free illumination for various applications.",
+          src: ledlight,
         },
         {
           id: 3,
@@ -93,12 +112,12 @@ const NewProducts=()=> {
         //   desc: "High efficiency, durable construction, weather resistance, grid-tied or off-grid options, and easy installation for sustainable energy generation.",
         //   src: solarpanel,
         // },
-        {
-          id: 5,
-          category: "Embedded Services",
-          desc: "Empowering users with intuitive interface, real-time updates, advanced analytics, security, multi-platform support, and personalized support.",
-          src: embed
-        },
+        // {
+        //   id: 5,
+        //   category: "Embedded Services",
+        //   desc: "Empowering users with intuitive interface, real-time updates, advanced analytics, security, multi-platform support, and personalized support.",
+        //   src: embed
+        // },
         // {
         //   id: 6,
         //   category: "Light",
@@ -119,12 +138,12 @@ const NewProducts=()=> {
         //   // src: "https://www.cellustechindia.com/img/04.jpg",
         //   src:ice2
         // },
-        {
-          id: 9,
-          category: "Ice Cube Making machine",
-          desc: "Small, frozen, typically cube-shaped pieces of ice used to cool beverages and preserve perishable items.",
-          src: whirlpool
-        },
+        // {
+        //   id: 9,
+        //   category: "Ice Cube Making machine",
+        //   desc: "Small, frozen, typically cube-shaped pieces of ice used to cool beverages and preserve perishable items.",
+        //   src: whirlpool
+        // },
        
         // {
         //   id: 13,
@@ -144,12 +163,7 @@ const NewProducts=()=> {
         //   desc: "Energy-efficient, long-lasting, low heat emission, and cost-effective illumination solution.",
         //   src: leds
         // },
-        {
-          id: 16,
-          category: "LED Lightning",
-          desc: " Energy-efficient, customizable color temperature, eco-friendly, and provides bright, flicker-free illumination for various applications.",
-          src: ctiled,
-        },
+       
         // {
         //   id: 17,
         //   category: "LED Concealed Light",
@@ -168,19 +182,19 @@ const NewProducts=()=> {
         //   desc: "End-to-end solar solutions, including design, installation, permits, and grid connection, for a seamless and efficient solar energy system.",
         //   src: solarturnkey,
         // },
-        {
-          id: 20,
-          category: "Industrial Solar Solution",
-          // "Renewable",
-          desc: "Scalable designs, advanced solar panels, monitoring systems, and tailored financing options for sustainable energy production.",
-          src: industrialsolar,
-        },
-        {
-          id: 21,
-          category: "Turnkey",
-          desc: "Encompass complete project management, from design and procurement to installation, commissioning, and handover, ensuring hassle-free implementation.",
-          src: sp,
-        },
+        // {
+        //   id: 20,
+        //   category: "Industrial Solar Solution",
+        //   // "Renewable",
+        //   desc: "Scalable designs, advanced solar panels, monitoring systems, and tailored financing options for sustainable energy production.",
+        //   src: industrialsolar,
+        // },
+        // {
+        //   id: 21,
+        //   category: "Turnkey",
+        //   desc: "Encompass complete project management, from design and procurement to installation, commissioning, and handover, ensuring hassle-free implementation.",
+        //   src: sp,
+        // },
         // {
         //   id: 22,
         //   category: "Solar Water Pump",
@@ -188,14 +202,13 @@ const NewProducts=()=> {
         //   desc: "Harnesses sunlight, energy-efficient, low maintenance, reliable, eco-friendly, suitable for remote areas, and provides sustainable water supply for various applications.",
         //   src:solarpump
         // },
-        {
-          id: 23,
-          category:"Solar Water Heater",
-          // "Renewable" 
-          desc: "Utilizes sunlight for heating, energy-efficient, reduces electricity bills, eco-friendly, reliable, and provides hot water for domestic use.",
-          src: waterheater,
-        },
-    
+        // {
+        //   id: 23,
+        //   category:"Solar Water Heater",
+        //   // "Renewable" 
+        //   desc: "Utilizes sunlight for heating, energy-efficient, reduces electricity bills, eco-friendly, reliable, and provides hot water for domestic use.",
+        //   src: waterheater,
+        // },
         // {
         //   id: 24,
         //   category: "Solar Street Light",
@@ -220,13 +233,13 @@ const NewProducts=()=> {
         //   src: transformer
         // },
     
-        {
-          id: 27,
-          category:" Electrolytic Earthing Solution",
-          //  "Non-Renewable ",
-          desc: "Ensures low resistance, long-lasting, corrosion-resistant, reliable grounding, and enhanced electrical safety for industrial applications.",
-          src: electric
-        },
+        // {
+        //   id: 27,
+        //   category:" Electrolytic Earthing Solution",
+        //   //  "Non-Renewable ",
+        //   desc: "Ensures low resistance, long-lasting, corrosion-resistant, reliable grounding, and enhanced electrical safety for industrial applications.",
+        //   src: electric
+        // },
         // {
         //   id: 28,
         //   category:"Electrical Panel",
@@ -246,14 +259,15 @@ const NewProducts=()=> {
       {
         id:2,
         category:'Industrial Smart LED Lights',
-        desc:' Offers Efficiency, durability, and eco-friendliness. Tailor lighting for productivity in industrial spaces, promoting sustainability and performance',
-        src:indus_smart_led
+        desc:' Tailor lighting for productivity in industrial spaces, promoting sustainability and performance',
+        // src:indus_smart_led
+        src:indus
       },
       {
         id:3,
         category:'Domestic Ordinary LED Lights',
         desc:'Customizable, Illuminate spaces with brilliance, promoting energy savings and comfort.',
-        src:bulb2
+        src:tube
       },
       {
         id:4,
@@ -262,6 +276,7 @@ const NewProducts=()=> {
         src:dom_smart
       }
     ]
+
 
     const homeAuto=[
       {
@@ -283,7 +298,7 @@ const NewProducts=()=> {
         id:1,
         category:'Smart Motor Controller',
         desc:'Enhance agricultural efficiency with intelligent control. Optimize farming devices, reduce energy consumption, and boost productivity seamlessly.',
-        src:smartmotorcont
+        src:starter
       },
       {
         id:2,
@@ -304,9 +319,74 @@ const NewProducts=()=> {
         id:2,
         category:'Testing Tools',
         desc:'Precision hardware for comprehensive testing. Elevate automotive performance, reliability, and efficiency with advanced tools for seamless analysis.',
-        src:tt
+        src:hw
       }
     ]
+
+
+    const smartcity=[
+      {
+        id:1,
+        category:'Smart Water Monitoring',
+        desc:'Efficient water management through advanced IoT technology for smart monitoring.',
+        src:smartwater
+      },
+      {
+        id:2,
+        category:'Automated Street Lightning',
+        desc:'Intelligent street lighting solutions for safer and energy-efficient urban environments.',
+        src:asl
+      },
+      {
+        id:3,
+        category:'Home Automation',
+        desc:'Transform your living space with cutting-edge home automation solutions.',
+        src:homeauto
+      },
+      {
+        id:4,
+        category:'Smart Traffic Lightning System',
+        desc:'Revolutionizing traffic control with smart, energy-efficient lighting solutions for cities.',
+        src:light
+      }
+    ]
+
+
+    const solar=[
+      {
+        id:1,
+        category:'Solar Water Heater',
+        desc:'Utilizes sunlight for heating, energy-efficient, reduces electricity bills, eco-friendly, reliable, and provides hot water for domestic use.',
+        src:waterheater
+      },
+      {
+        id:2,
+        category:'Solar Street Light',
+        desc:'Harnesses solar energy, automatic dusk-to-dawn operation, durable, and provides eco-friendly outdoor lighting solution.',
+        src:solarstreetlight
+      },
+      {
+        id:3,
+        category:'Solar Turnkey',
+        desc:'End-to-end solar solutions, including design, installation, permits, and grid connection, for a seamless and efficient solar energy system.',
+        src:solarturnkey
+      },
+      // {
+      //   id:4,
+      //   category:'Solar Water Pump',
+      //   desc:'Harnesses sunlight, energy-efficient, low maintenance, reliable, eco-friendly, suitable for remote areas, and provides sustainable water supply for various applications.',
+      //   src:solarpump
+      // },
+      {
+        id: 5,
+        category: "Industrial Solar Solution",
+        // "Renewable",
+        desc: "Scalable designs, advanced solar panels, monitoring systems, and tailored financing options for sustainable energy production.",
+        src: industrialsolar,
+      },
+    ]
+
+    
       const handleProductClick = (selectedProduct) => {
         localStorage.setItem('selectedProduct', JSON.stringify(selectedProduct));
         console.log('Selected Product:', selectedProduct);
@@ -321,6 +401,7 @@ const NewProducts=()=> {
       };
 
       
+
   return (
     <>
     <div className='newproduct__parent'>
@@ -334,7 +415,7 @@ const NewProducts=()=> {
         </div>
 
         <div className="iotSol__text">
-          <p style={{marginTop:'3%'}}>
+          <p style={{marginTop:'2.5%'}}>
           Our products are also available at amazon.in , flipkart.com, snapdeal.com, shopclues.com, meesho.com and paytm.com for online selling.
           </p>
         </div>
@@ -365,7 +446,7 @@ const NewProducts=()=> {
             <h2 className="heading_products">
               <strong>LED Lightning</strong>
             </h2>
-            <img src={compLine}  />
+            <img src={compLine} style={{objectFit:'cover'}}/>
           </div>
         </div>
 
@@ -422,7 +503,6 @@ homeAuto.map((item)=>(
 </div>
 </section>
 
-
 <section id='smart_farming'>
 <div className='smart_farming' >
 <div className="iotSol__head">
@@ -430,7 +510,7 @@ homeAuto.map((item)=>(
             <h2 className="heading_products">
               <strong>Smart Farming Devices</strong>
             </h2>
-            <img src={compLine}/>
+            <img src={compLine} style={{objectFit:'cover'}}/>
           </div>
         </div>
 
@@ -457,6 +537,70 @@ smartfarming.map((item)=>(
 </div>
 </section>
 
+<section  id='solar_smart'>
+<div className='led_items'>
+  {/* <h2>LED Lights</h2> */}
+  <div className="iotSol__head">
+          <div className="iotSol__headImg1">
+            <h2 className="heading_products">
+              {/* <strong>Sun Wise Hub</strong> */}
+              <strong>Turnkey Projects</strong>
+            </h2>
+            <img src={compLine}  />
+          </div>
+        </div>
+
+  <div className='newproduct__main'>
+    {
+        solar.map((item)=>(
+            <div class="card" style={{width: "18rem", height:'32rem'}}>
+            <img class="card-img-top" src={item.src} alt="Card image cap" style={{height:'15rem'}}/>
+            <div class="card-body">
+              <h5 class="card-title">{item.category}</h5>
+              <p class="card-text">{item.desc}</p>
+              <Link to='/product'>
+              <button  class="btn btn-primary" onClick={() => handleProductClick(item)}>Know More</button>
+              </Link>
+            </div>
+          </div>
+        ))
+    }
+    </div>
+
+</div>
+</section>
+
+<section id='smart_city'>
+<div className='led_items'>
+  {/* <h2>LED Lights</h2> */}
+  <div className="iotSol__head">
+          <div className="iotSol__headImg1">
+            <h2 className="heading_products">
+              <strong>Smart City Projects</strong>
+            </h2>
+            <img src={compLine}  />
+          </div>
+        </div>
+
+  <div className='newproduct__main'>
+    {
+        smartcity.map((item)=>(
+            <div class="card" style={{width: "18rem", height:'32rem'}}>
+            <img class="card-img-top" src={item.src} alt="Card image cap" style={{height:'15rem'}}/>
+            <div class="card-body">
+              <h5 class="card-title">{item.category}</h5>
+              <p class="card-text">{item.desc}</p>
+              <Link to='/product'>
+              <button  class="btn btn-primary" onClick={() => handleProductClick(item)}>Know More</button>
+              </Link>
+            </div>
+          </div>
+        ))
+    }
+    </div>
+
+</div>
+</section>
 
 <section id='hardware'>
 <div className='hardware_tools' >
@@ -474,7 +618,7 @@ smartfarming.map((item)=>(
 automotive.map((item)=>(
 
   <div class="card" style={{margin:'3rem'}}> 
-      <img class="card-img-top" src={item.src} alt="Card image cap" style={{height:'20rem'}}/> 
+      <img class="card-img-top" src={item.src} alt="Card image cap" style={{height:'20rem', objectFit:'cover'}}/> 
       <div class="card-block"> 
           <h4 class="card-title" >{item.category}</h4> 
           <p class="card-text" > 

@@ -51,7 +51,7 @@ export default function InContact() {
 
   return (
     <>
-      <div className="incontact_parent">
+      <section className="incontact_parent" id='incontact_section'>
         <section class="h-screen grid grid-cols-2">
           <main class="flex flex-col overflow-y-auto">
             <div class="py-7" style={{ paddingInline: "22px" }}>
@@ -387,7 +387,7 @@ export default function InContact() {
             </section>
           </aside>
         </section>
-      </div>
+      </section>
     </>
   );
 }

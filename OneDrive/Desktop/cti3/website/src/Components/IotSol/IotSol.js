@@ -16,6 +16,7 @@ import qs from '../Images/qs.jpg'
 import embed from '../Images/embed.jpeg'
 import fwd from '../Images/fwd.jpg'
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 
 export default function IotSol() {
@@ -120,9 +121,9 @@ export default function IotSol() {
             <Link to='/iotDetails' onClick={scrollToTop}>
             <button className="iotbtn1">Explore More</button>
             </Link>
-            <Link to='/contact'  onClick={scrollToTop}>
+            <HashLink to='/#incontact_section' onClick={scrollToTop} smooth>
             <button className="iotbtn2">Reach Us</button>
-            </Link>
+            </HashLink>
           </div>
         </div>
       </div>

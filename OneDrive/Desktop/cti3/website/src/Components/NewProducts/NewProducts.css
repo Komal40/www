@@ -15,6 +15,10 @@ margin-left: 5%;
 margin-bottom: 2rem;
 }
 
+.heading_products strong{
+    margin-top: 3rem;
+}
+
 .card-deck h4{
     text-align: center;
     padding-top: 4%;
@@ -38,6 +42,9 @@ margin-bottom: 2rem;
     }
     .card-deck{
         margin: 0;
+    }
+    .heading_products strong{
+        margin-top: 0;
     }
     
 }

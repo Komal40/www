@@ -26,35 +26,35 @@ export const content = [
   },
   {
     id: 8,
-    heading: "CYBERSECURITY SOLUTIONS",
+    heading: "CYBER SECURITY SOLUTIONS",
     para: "We offers Overall Cybersecurity Management with a team having extensive knowledge of ISO 26262 Functional Safety and ISO 21434 Cybersecurity.",
     bulb: cyber,
   },
 
   {
     id: 1,
-    heading: "Complete Lighting Solution(LED, CFL & INCANDENCE)",
+    heading: "Complete Lighting Solution(LED and smart LED)",
     para: "We do manufacture, Dealing and Servicing the complete lighting solution including incandance , CFL and LED Lights with the variety of the designs.",
     bulb: led,
   },
-  {
-    id: 2,
-    heading: "SOLAR PANEL COMPLETE SOLUTION OF SOLAR ENERGY",
-    para: "We do manufacture, Dealing and Servicing LED Light by considering the energy efficient envirnment (The Green Envirnment).",
-    bulb: robo,
-  },
+  // {
+  //   id: 2,
+  //   heading: "SOLAR PANEL COMPLETE SOLUTION OF SOLAR ENERGY",
+  //   para: "We do manufacture, Dealing and Servicing LED Light by considering the energy efficient envirnment (The Green Envirnment).",
+  //   bulb: robo,
+  // },
   // {
   //     heading:'ICE CUBE MACKING MACHINE/ DEFREEZERS/ COOLING COUNTER',
   //     para:'We do Manufacture, Dealing and Servicing of Ice Cube making Machines, Defreezers with the varieties',
   //     bulb:img2
   // },
 
-  {
-    id: 5,
-    heading: "POWER DISTRIBUTION PANEL",
-    para: "We do Manufacure, Dealing and Servicing of Water Purifying Filters, Reverse Osmosis and the complete purifying Solution of Water.",
-    bulb: charge,
-  },
+  // {
+  //   id: 5,
+  //   heading: "POWER DISTRIBUTION PANEL",
+  //   para: "We do Manufacure, Dealing and Servicing of Water Purifying Filters, Reverse Osmosis and the complete purifying Solution of Water.",
+  //   bulb: charge,
+  // },
   {
     id: 6,
     heading: "ELECTRICAL AND ELECTRONIC SERVICES",
@@ -62,22 +62,22 @@ export const content = [
     bulb: elect,
   },
 
-  {
-    id: 3,
-    heading:
-      "AIR CONDITIONER/ WATER COOLER/ REFRIGERATORS & ALL OTHER REFRIGERATION MACHINERY",
-    para: "We do Manufacture, Dealing and Servicing of All Kind of Refrigeration Equipments.",
-    bulb: heat,
-  },
+  // {
+  //   id: 3,
+  //   heading:
+  //     "ICE CUBE MAKING MACHINES",
+  //   para: "We do Manufacture, Dealing and Servicing of All Kind of Refrigeration Equipments.",
+  //   bulb: heat,
+  // },
   // {
   //     heading:'SERVICING/ SALE & PURCHASE OF USED REFRIGERATION MACHINERY',
   //     para:'We do Manufacture, Dealing and Servicing of Ice Cube making Machines, Defreezers with the varieties.',
   //     bulb:img4
   // },
-  {
-    id: 4,
-    heading: "WATER PURIFIERS/ REVERSE OSMOSIS ETC",
-    para: "We do Manufacture , Dealing and Servicing of Air conditioners, Water Coolers and Refrigerators with the varieties, Dealing and Servicing of Air conditioners",
-    bulb: cyl,
-  },
+  // {
+  //   id: 4,
+  //   heading: "REVERSE OSMOSIS ",
+  //   para: "We do Manufacture , Dealing and Servicing of Air conditioners, Water Coolers and Refrigerators with the varieties, Dealing and Servicing of Air conditioners",
+  //   bulb: cyl,
+  // },
 ];

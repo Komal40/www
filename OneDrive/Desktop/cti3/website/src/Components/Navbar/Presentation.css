@@ -6,7 +6,9 @@
     text-decoration: none;
 }
 
-
+.presentation-container iframe{
+    margin-top: 8rem;
+}
 @media screen and (max-width:1024px) {
     .present{
         display: flex;
@@ -15,5 +17,11 @@
     .present button{
         margin-bottom: 20px;
         width: max-content;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .presentation-container iframe{
+        margin-top: 1rem;
     }
 }

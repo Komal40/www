@@ -18,11 +18,11 @@ import Certificates from "./Components/Certificates/Certificates";
 import NewProducts from "./Components/NewProducts/NewProducts";
 import Career from "./Components/Career/Career";
 import Resource from "./Components/Resource/Resource";
+import Ratings from "./Components/Ratings/Ratings";
 
 const MainHome = () => {
   return (
     <div>
-
       <Home />
       <Home2 />
       <Automotive />
